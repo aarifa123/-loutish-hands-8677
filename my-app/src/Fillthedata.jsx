@@ -19,15 +19,13 @@ export default function MyForm() {
       });
       const formdata = {
       "TITLE": form.TITLE.value,
+      "IMAGE": form.IMAGE.value,
       "PRICE": form.PRICE.value,
-      "IMAGE1": form.IMAGE1.value,
-      "IMAGE2": form.IMAGE2.value,
-      "IMAGE3": form.IMAGE3.value,
-      "IMAGE4": form.IMAGE4.value,
-      "DESCRIPTION": form.DESCRIPTION.value,
-      "MAINCATEGORY": form.MAINCATEGORY.value
+      "MAINCATEGORY": form.MAINCATEGORY.value,
+      "DESC": form.DESC.value,
+      
       }
-       axios.post("https://api-data-iv41.onrender.com/Products",formdata)
+       axios.post("https://davidbridal.onrender.com/data",formdata)
         .then(response => {
           swal("Product Added to Site...!", "Click Ok to Continue ...!", "success");
           formRef.current.reset();
@@ -47,12 +45,7 @@ export default function MyForm() {
         <div style={{maxWidth:"500px",margin:"auto"}}>
       <form name="submit-to-google-sheet" onSubmit={handleSubmit} className="Form" ref={formRef}>
         <Textarea name="TITLE" type="text" placeholder="Title of Product ..." required />
-        <Input name="PRICE" type="number" placeholder="Price of Product ..." required />
-        <Input name="IMAGE1" type="text" placeholder="Img-1 URL..." required />
-        <Input name="IMAGE2" type="text" placeholder="Img-2 URL..." required />
-        <Input name="IMAGE3" type="text" placeholder="Img-3 URL..." required />
-        <Input name="IMAGE4" type="text" placeholder="Img-4 URL..." required />
-        <Textarea name="DESCRIPTION" type="text" placeholder="Des of Product..." required />
+        <Input name="IMAGE" type="text" placeholder="ImgURL..." required />
         <Select name="MAINCATEGORY" placeholder='Select Category ...' required>
           <option value='Bestsellers'>Bestsellers</option>
           <option value='SkinCare'>Skin Care</option>
@@ -63,6 +56,11 @@ export default function MyForm() {
           <option value='Fragrance'>Fragrance Shop</option>
           <option value='Gifts_Sets'>Gifts & Sets</option>
         </Select>
+        <Input name="PRICE" type="number" placeholder="Price of Product ..." required />
+        
+        
+        <Textarea name="DESC" type="text" placeholder="Des of Product..." required />
+        
         <ButtonGroup style={{display:"flex",justifyContent:"space-between"}}>
            <Link to="/admin_dashboard"><Button>...Back</Button></Link>
            <Button type="submit">Add to Site ... </Button>
