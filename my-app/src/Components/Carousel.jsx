@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 function Slider() {
   const [index, setIndex] = useState(0);
   const [images, setImages] = useState([
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTikCjuQ95VZ4NqYk3S-vMb4bvr_pCsiTIKdA&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9z-yMHnoNXJNf9tWAItNKOYIzyaar9BN2Ng&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQinrzOoVWwa6iUKiiwRBUlZMZ9b_B93S0Adg&usqp=CAU",
-    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6WGr_tc3_Z9nSsBeN4o_qbMtZ-vCQd7UvZQ&usqp=CAU"
+    "  https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/S23_ReImagine_HP_Module_Desktop.jpg",
+    "https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/S23_Trunk_Show_Site_HP_desktop.jpg",
+    "https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/HOP_HP_Banner_Desktop_v2.jpg",
+    "https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/Ashley_HP_TEST_Desktop.jpg"
   ]);
 
   useEffect(() => {
@@ -20,7 +20,10 @@ function Slider() {
     <>
       <h1 style={{ textAlign: "center" }}>Welcome to my Custom Slider</h1>
       <section className="slider">
-        <img src={images[index]} alt="" />
+        <img src={images[index]} alt="" style={{
+          width:"100%",
+          height:"500px"
+        }} />
       </section>
     </>
   );

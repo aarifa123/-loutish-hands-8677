@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from './Carousel'
+import "../CSS/style.css"
  function Savings() {
   return (
     <>
@@ -135,6 +136,58 @@ marginTop:"50px"
   )
 }
 
+
+function Beautiful() {
+  return (
+    <>
+    <h1>
+
+    </h1>
+    <h1 style={{color:"#AA336A",marginTop:"50px"}}>𝒷𝑒𝒶𝓊𝓉𝒾𝒻𝓊𝓁𝓁𝓎 𝒹𝑒𝓈𝒾𝑔𝓃𝑒𝒹,</h1>
+    <h1 style={{marginTop:"20px"}}>perfectly priced</h1>
+    <div style={{
+        display:"flex",
+    alignItems:"center",
+    justifyContent:"center",
+    gap:"30px",
+ 
+
+   
+    padding:"50px"
+
+    }} className="my-class">
+      
+      <div  style={{width:"300px",height:"400px"}}>
+        <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/under-200@2x_RESIZED.jpg" alt="" />
+        <h6 style={{textDecoration:"underline"}}>wedding dresses under $200</h6>
+      </div>
+      <div style={{width:"300px",height:"400px"}}>
+        <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/under%20500@2x.jpg" alt="" />
+        <h6 style={{textDecoration:"underline"}}>wedding dresses under $500</h6>
+      </div>
+      <div style={{width:"300px",height:"400px"}}>
+        <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/under%201000@2x.jpg" alt="" />
+        <h6 style={{textDecoration:"underline"}}>wedding dresses under $1000 </h6>
+      </div>
+      <div style={{width:"300px",height:"400px"}}>
+        <img src="https://prod.davidsbridal.com/content/dam/aem-integration/brand/homepage/over%201000@2x.jpg" alt="" />
+        <h6 style={{textDecoration:"underline"}}>wedding dresses over $1000</h6>
+      </div>
+     
+    </div>
+    <br /><br />
+    <button style={{width:"200px",height:"50px" ,display:"flex",background:"none"
+,alignItems:"center",justifyContent:"center",margin:"auto",border:"1px solid gray",marginTop:"0",
+
+
+
+}} className='button'>SHOP ALL WEDDING DRESSES</button>
+    
+    </>
+  )
+}
+
+
 export default function MiniBanners() {
   return (
     <div>
@@ -142,6 +195,7 @@ export default function MiniBanners() {
       <Brands/>
       <Wink/>
 <Slider/>
+<Beautiful/>
     </div>
   )
 }
